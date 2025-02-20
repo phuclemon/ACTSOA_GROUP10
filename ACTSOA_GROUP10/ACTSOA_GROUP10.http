@@ -1,0 +1,6 @@
+@ACTSOA_GROUP10_HostAddress = http://localhost:5168
+
+GET {{ACTSOA_GROUP10_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
