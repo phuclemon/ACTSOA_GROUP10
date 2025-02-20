@@ -34,5 +34,15 @@ namespace ACTSOA_GROUP10.DataAccessLayer
                 .FromSqlRaw("EXEC GetTopRatedMovies @top_count = {0}", topCount)
                 .ToListAsync();
         }
+
+        public Task DeleteMovieAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Movie?> UpdateMovieAsync(Movie movie)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

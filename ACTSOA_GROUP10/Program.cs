@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using ACTSOA_GROUP10.DataAccessLayer;
-using Microsoft.EntityFrameworkCore;
 using ACTSOA_GROUP10.ServiceLayer.Services;
 var builder = WebApplication.CreateBuilder(args);
 
