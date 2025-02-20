@@ -1,4 +1,4 @@
-﻿using Azure;
+﻿
 using Microsoft.EntityFrameworkCore;
 using ACTSOA_GROUP10.CoreLayer.Entities;
 namespace ACTSOA_GROUP10.DataAccessLayer
@@ -16,7 +16,12 @@ namespace ACTSOA_GROUP10.DataAccessLayer
         protected override void OnModelCreating(ModelBuilder
        modelBuilder)
         {
-            modelBuilder.Entity<MovieSeriesTag>()
+            modelBuilder.Entity < Movie>().ToTable("MoviesSeries");
+
+            modelBuilder.Entity<Movie>()
+.Property(e => e.Id).HasColumnName("movie_series_id");
+
+             modelBuilder.Entity<MovieSeriesTag>()
             .HasKey(mst => new { mst.MovieSeriesId, mst.TagId });
             modelBuilder.Entity<MovieSeriesTag>()
             .HasOne(mst => mst.Movie)
