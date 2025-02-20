@@ -1,6 +1,6 @@
 ﻿using Azure;
 using Microsoft.EntityFrameworkCore;
-using MovieSeries.CoreLayer.Entities;
+using ACTSOA_GROUP10.CoreLayer.Entities;
 namespace ACTSOA_GROUP10.DataAccessLayer
 {
     public class AppDbContext : DbContext
