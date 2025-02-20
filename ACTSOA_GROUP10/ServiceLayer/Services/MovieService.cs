@@ -1,14 +1,15 @@
 ﻿using ACTSOA_GROUP10.CoreLayer.Entities;
-using ACTSOA_GROUP10.CoreLayer.Entities;
 using ACTSOA_GROUP10.DataAccessLayer;
+using ACTSOA_GROUP10.ServiceLayer.Services;
 
-namespace MovieSeries.ServiceLayer.Services
+
+namespace ACTSOA_GROUP10.ServiceLayer.Services
 {
     public class MovieService : IMovieService
     {
-        private readonly MovieRepository _movieRepository;
+        private readonly IMovieRepository _movieRepository;
 
-        public MovieService(MovieRepository movieRepository)
+        public MovieService(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;
         }

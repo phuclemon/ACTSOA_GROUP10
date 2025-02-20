@@ -1,12 +1,16 @@
 //using ACTSOA_GROUP10.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using System;
-
+using ACTSOA_GROUP10.DataAccessLayer;
+using Microsoft.EntityFrameworkCore;
+using ACTSOA_GROUP10.ServiceLayer.Services;
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<MovieService>();
 // Add services to the container.
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMovieService, MovieService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

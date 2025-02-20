@@ -1,13 +1,12 @@
 ﻿using ACTSOA_GROUP10.CoreLayer.Entities;
 
-
-namespace ACTSOA_GROUP10.ServiceLayer.Services
+namespace ACTSOA_GROUP10.DataAccessLayer
 {
-    public interface IMovieService
+    public interface IMovieRepository
     {
         Task<IEnumerable<Movie>> GetAllMoviesAsync();
-        Task<Movie> GetMovieByIdAsync(int id);
         Task AddMovieAsync(Movie movie);
+        Task<Movie> GetMovieByIdAsync(int id);
         Task<IEnumerable<Movie>> GetTopRatedMoviesWithSpAsync(int topCount);
     }
 }
