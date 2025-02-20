@@ -1,4 +1,4 @@
-﻿namespace ACTSOA_GROUP10.CoreLayer.Entities
+﻿    namespace ACTSOA_GROUP10.CoreLayer.Entities
 {
     public class Review
     {
