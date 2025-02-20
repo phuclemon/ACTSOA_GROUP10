@@ -1,10 +1,10 @@
-
+//using ACTSOA_GROUP10.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
-using ACTSOA_GROUP10.DataAccessLayer;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
