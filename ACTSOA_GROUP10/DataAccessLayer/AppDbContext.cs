@@ -18,10 +18,10 @@ namespace ACTSOA_GROUP10.DataAccessLayer
         {
             modelBuilder.Entity < Movie>().ToTable("MoviesSeries");
 
-            modelBuilder.Entity<Movie>()
-.Property(e => e.Id).HasColumnName("movie_series_id");
+            modelBuilder.Entity<Movie>().Property(e => e.Id).HasColumnName("movie_series_id");
+            modelBuilder.Entity<Movie>().Property(e => e.ReleaseDate).HasColumnName("release_date");
 
-             modelBuilder.Entity<MovieSeriesTag>()
+            modelBuilder.Entity<MovieSeriesTag>()
             .HasKey(mst => new { mst.MovieSeriesId, mst.TagId });
             modelBuilder.Entity<MovieSeriesTag>()
             .HasOne(mst => mst.Movie)
